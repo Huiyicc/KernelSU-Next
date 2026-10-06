@@ -10,7 +10,9 @@
 // 3: scoped su-session driver fd
 // 4: add KSU_GET_INFO_FLAG_BUNDLED
 // 5: add EVENT_SERVICES with a start/skip result
-#define KERNEL_SU_UAPI_VERSION 5
+// (locally pinned to 4 to match the v3.4.0 manager/ksud release; the
+// EVENT_SERVICES handler stays compiled in and is simply never called)
+#define KERNEL_SU_UAPI_VERSION 4
 
 /* Magic numbers for reboot hook to install fd */
 #define KSU_INSTALL_MAGIC1 0xDEADBEEF
